@@ -21,6 +21,9 @@ Thumbs.db
 .vscode/
 *.sublime-*
 
+# Dependencies
+/vendor
+
 # Cache
 *.cache
 tmp/
