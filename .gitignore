@@ -1,0 +1,26 @@
+# Environnement
+.env
+
+# Base de données
+database/*.sqlite
+database/*.db
+
+# Uploads
+public/uploads/**/*
+!public/uploads/.gitkeep
+
+# Logs
+storage/logs/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Cache
+*.cache
+tmp/
