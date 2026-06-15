@@ -6,6 +6,8 @@
 
 **Epsilon** est une plateforme de peer-learning développée pour l'EPSI Lille. Les apprenants progressent à travers des parcours de défis, soumettent leurs travaux, et s'évaluent mutuellement pour gagner des badges et des rangs.
 
+**Dépôt GitHub :** [github.com/AVTAVANTTOUT2/Epsilon2](https://github.com/AVTAVANTTOUT2/Epsilon2) (public)
+
 ---
 
 ## Architecture
@@ -14,6 +16,7 @@
 Epsilon2/
 ├── public/                  # Point d'entrée web
 │   ├── index.php            # Front controller
+│   ├── router.php           # Routeur pour le serveur PHP intégré
 │   ├── .htaccess            # Rewrite rules (Apache)
 │   ├── assets/
 │   │   └── css/style.css    # CSS complet (thème cosmique sombre)
@@ -71,13 +74,14 @@ Epsilon2/
 
 ```bash
 # 1. Cloner le projet
-cd /chemin/vers/Epsilon2
+git clone https://github.com/AVTAVANTTOUT2/Epsilon2.git
+cd Epsilon2
 
 # 2. Migrer la base de données
 php database/migrate.php
 
-# 3. Lancer le serveur
-cd public && php -S localhost:8888
+# 3. Lancer le serveur (routeur requis pour les URLs propres)
+cd public && php -S localhost:8888 router.php
 
 # 4. Ouvrir http://localhost:8888
 ```
@@ -208,3 +212,7 @@ php tests/run.php
 | Tests | Aucun | 31 tests automatisés |
 | Stockage | MySQL requis | SQLite (zero-config) ou MySQL |
 | Émails | Oui (mail()) | Oui + mode dev sans SMTP |
+
+## Journal de développement
+
+- **2026-06-15** : Correction de la page d'accueil — la route `/` inclut désormais le layout (`View::render`) pour charger le CSS, la navbar et le footer. Ajout de `public/router.php` pour le serveur PHP intégré.

@@ -26,6 +26,7 @@ require_once $rootDir . '/app/Controllers/SubmissionController.php';
 require_once $rootDir . '/app/Controllers/EvaluationController.php';
 
 use App\Core\Router;
+use App\Core\View;
 use App\Controllers\AuthController;
 use App\Controllers\CourseController;
 use App\Controllers\SubmissionController;
@@ -39,7 +40,7 @@ $router->get('/', function () {
         header('Location: /dashboard');
         exit;
     }
-    require_once dirname(__DIR__) . '/views/home.php';
+    echo View::render('home', ['title' => 'Epsilon - Peer-learning EPSI Lille']);
 });
 
 $router->get('/login', [AuthController::class, 'loginForm']);
