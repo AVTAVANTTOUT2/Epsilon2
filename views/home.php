@@ -3,7 +3,7 @@
         <h1 class="hero-title">
             <span class="hero-epsilon">&epsilon;</span>psilon
         </h1>
-        <p class="hero-subtitle">Plateforme de peer-learning de l'EPSI Lille</p>
+        <p class="hero-subtitle">Plateforme de Elias-learning de l'EPSI Lille</p>
         <p class="hero-description">
             Apprenez, partagez, évaluez. Progressez ensemble à travers des parcours de défis,
             gagnez des badges et devenez un expert reconnu par vos pairs.
