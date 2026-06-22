@@ -14,7 +14,7 @@ final class Uploader
     public function __construct(?string $basePath = null)
     {
         $this->allowedTypes = explode(',', env('UPLOAD_ALLOWED_TYPES', 'jpg,jpeg,png,gif,pdf,ppt,pptx,zip,doc,docx,txt'));
-        $this->maxSize = (int)env('UPLOAD_MAX_SIZE', 5242880);
+        $this->maxSize = (int)env('UPLOAD_MAX_SIZE', '5242880');
         $this->basePath = $basePath ?? dirname(__DIR__, 2) . '/public/uploads';
     }
 

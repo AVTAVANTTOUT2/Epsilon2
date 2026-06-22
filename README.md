@@ -216,3 +216,4 @@ php tests/run.php
 ## Journal de développement
 
 - **2026-06-15** : Correction de la page d'accueil — la route `/` inclut désormais le layout (`View::render`) pour charger le CSS, la navbar et le footer. Ajout de `public/router.php` pour le serveur PHP intégré.
+- **2026-06-15** : Correction upload — `env('UPLOAD_MAX_SIZE')` utilise une valeur par défaut en chaîne (typage strict PHP 8).
